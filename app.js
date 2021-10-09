@@ -33,3 +33,14 @@ class School {
     return substituteTeachers[Math.floor(Math.random()*substituteTeachers.length)];
   }
 }
+
+class PrimarySchool extends School {
+  constructor(name, numberOfStudents, pickupPolicy) {
+    super(name, 'primary', numberOfStudents);
+    this._pickupPolicy = pickupPolicy;
+  }
+
+  get pickupPolicy() {
+    return this._pickupPolicy;
+  }
+}
